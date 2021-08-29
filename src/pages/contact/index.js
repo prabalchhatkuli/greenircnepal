@@ -52,7 +52,7 @@ export default class Index extends React.Component {
                 alignItems: "center"
               }}
               >
-                  <div className="content is-large has-text-centered"
+                  <div className="content is-normal has-text-centered"
                   style={{backgroundColor:"rgba(255, 255, 255, 0.8)", borderRadius: "25px"}}>
                     <h3>
                       Hello there, please send us any questions, comments,
