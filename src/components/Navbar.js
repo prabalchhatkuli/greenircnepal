@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={logo} alt="Kaldi" style={{ width: '140px' }} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -64,20 +64,25 @@ const Navbar = class extends React.Component {
                 Home
               </Link>
               <Link className="navbar-item" to="/about">
-                About
+                About us
               </Link>
               <Link className="navbar-item" to="/products">
-                Products
+                Services
               </Link>
               <Link className="navbar-item" to="/blog">
-                Blog
+                Publications/Releases
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
+
+              {/* this is commented because we dont need this right now, 
+              this has link to the contact and upload page */}
+
+              {/* <Link className="navbar-item" to="/contact/examples">
                 Form Examples
-              </Link>
+              </Link> */}
+
             </div>
             {/* <div className="navbar-end has-text-centered">
               <a
