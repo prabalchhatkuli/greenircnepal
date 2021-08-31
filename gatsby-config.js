@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: 'Green Innovative Research Center (GIRC) Nepal',
-    description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    description:'We focus on a green view to develop the socioeconomic status of Nepalese people especially residing in rural area. \
+    climate change and environmental protection, high value agriculture products \
+    and its marketing, water, sanitation and hygiene (WASH), renewable energy technology, \
+    climate change, cooperative management, institutional development, social mobilization, \
+    women and child rights and health. \
+    Flood, natural, disaster, prevention, forests, green energy, sustainability, gorkha nepal, \
+    dhading nepal, Palungtar Gorkha Nepal. \
+    GREEN Innovative Research Center ( GIRC Nepal) greenircnepal.org, Kathmandu-14, Kalanki. \
+    Kochi University, Japan, JICA, aid, affiliation \
+    development, disaster prevention',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -10,6 +18,15 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         indentedSyntax: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Oxygen`
+        ],
+        display: 'swap'
       }
     },
     {
