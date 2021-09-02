@@ -8,8 +8,7 @@ mainpitch:
   title: What is GIRC Nepal?
   description: >
     GIRC Nepal is committed to empower the deprived groups in Nepal society through awareness, technology, sustainability,
-social mobilization, and livelihood improvement. Its Mission Statement is
-&quot;Facilitating to build a more resilient and equitable development of the Nepali society&quot;.
+social mobilization, and livelihood improvement. Its Mission Statement is "Facilitating to build a more resilient and equitable development of the Nepali society".
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
   production, roasting and brewing seriously and we’re glad to pass that
