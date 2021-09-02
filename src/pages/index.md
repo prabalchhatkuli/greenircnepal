@@ -3,7 +3,7 @@ templateKey: index-page
 title: Green Innovative Research Center
 image: /img/greenView.jpg
 heading: Great coffee with a conscience
-subheading: Supporting Sustainability with Research
+subheading: Supporting Development, Sustainability, and Economic Prosperity
 mainpitch:
   title: Why GIRC in Nepal?
   description: >

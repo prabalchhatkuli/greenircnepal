@@ -3,17 +3,28 @@ templateKey: 'about-page'
 path: /about
 title: About our values
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### Local Development
+Assisting &amp; facilitating the local people for their self motivated development
+effort, promotion and adoption of optimum utilization of natural resources for the
+sustainable development, development of local human resources through the
+appropriate training, counseling, seminars, exposure tour etc.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+### Relation with Stakeholders
+Promotion and strengthening of Community Organizations thorough development
+of co-ordination and linkage among the line agencies such as; municipalities,
+governmental departments, Water Resources and Irrigation Divisions &amp; forest and
+climate divisions and other stakeholders working in the field of development.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### Community Programs
+Enhance the resistance capacity of community thereby developing more resilient
+infrastructure by differential activities such as; Commercial Agricultural
+Production &amp; Marketing, Environmental protection &amp; management, Water
+Sanitation &amp; Hygiene (WASH), Gender &amp; Social Inclusion.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+### Women and Children Health
+Enhance the health status of the women and children through improved nutritional
+facility, good health practice &amp; health seeking behavior.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+### Technology
+Adoption of Integrated approach for development process including promoting advancement of
+technology and providing local and international technology solutions and software consulting.

@@ -41,11 +41,11 @@ export default class Index extends React.Component {
             <div className="columns is-variable is-7">
               <div className="column is-two-fifths" 
                 style={{
-                backgroundImage: `url("/img/customer.jpg")`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
+                // backgroundImage: `url("/img/customer.jpg")`,
+                // backgroundRepeat: "no-repeat",
+                // backgroundSize: "cover",
                 backgroundPosition: "center bottom",
-                
+                backgroundColor:"rgba(255, 255, 255, 0.8)",
                 borderRadius: "25px",
                 display: "flex",
                 justifyContent: "center",
