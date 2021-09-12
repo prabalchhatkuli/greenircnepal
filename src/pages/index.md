@@ -2,46 +2,33 @@
 templateKey: index-page
 title: Green Innovative Research Center
 image: /img/greenView.jpg
-heading: Great coffee with a conscience
+heading: An Organization with Values and Objectives
 subheading: Supporting Development, Sustainability, and Economic Prosperity
 mainpitch:
-  title: What is GIRC Nepal?
+  title: Why GIRC Nepal?
   description: >
-    GIRC Nepal is committed to empower the deprived groups in Nepal society through awareness, technology, sustainability,
-social mobilization, and livelihood improvement. Its Mission Statement is "Facilitating to build a more resilient and equitable development of the Nepali society".
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+    Green Innovative Research Center Nepal is committed to empower the deprived group of society through awareness,
+    social mobilization, capacity and livelihood improvement. Its Mission Statement is
+    "Facilitating to build a more resilient and equitable development of societies in Nepal".
+description: >
+  For us, Green is not specific to environmental greenery; GIRC relates the word green to food, shelter,
+  health, culture, peace and development. For this reason our NGO, in addition to plantation &
+  environmental awareness activities, is involved in Education, Food &
+  clothes distribution, and awareness+community empowerment projects.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/green-clean.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
+        cleaner earth
+    - image: /img/people-thinking.png
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
+        thinkinh people
+    - image: /img/people-of-color.png
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
+        people of culture
     - image: /img/meeting-space.png
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        space filler
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

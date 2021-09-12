@@ -63,14 +63,28 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/">
                 Home
               </Link>
-              <Link className="navbar-item" to="/about">
-                About us
-              </Link>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  About us
+                </a>
+                <div class="navbar-dropdown">
+                  <Link className="navbar-item" to="/about">
+                    Values and Mission
+                  </Link>
+                  <hr class="navbar-divider"/>
+                  <Link className="navbar-item" to="/about">
+                    Our Team
+                  </Link>
+                </div>
+              </div>
               <Link className="navbar-item" to="/products">
                 Services
               </Link>
-              <Link className="navbar-item" to="/blog">
+              {/* <Link className="navbar-item" to="/blog">
                 Publications/Releases
+              </Link> */}
+              <Link className="navbar-item" to="/products">
+                Gallery
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
@@ -103,4 +117,4 @@ const Navbar = class extends React.Component {
   }
 }
 
-export default Navbar
+export default Navbar;
