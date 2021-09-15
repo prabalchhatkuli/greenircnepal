@@ -72,7 +72,7 @@ const Navbar = class extends React.Component {
                     Values and Mission
                   </Link>
                   <hr class="navbar-divider"/>
-                  <Link className="navbar-item" to="/about">
+                  <Link className="navbar-item" to="/team">
                     Our Team
                   </Link>
                 </div>
