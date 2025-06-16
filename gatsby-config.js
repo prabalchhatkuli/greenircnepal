@@ -17,8 +17,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        indentedSyntax: true
-      }
+        sassOptions: {
+          indentedSyntax: true,
+        },
+      },
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -42,18 +44,14 @@ module.exports = {
         name: 'images',
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
+          'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -73,25 +71,17 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: 'gatsby-plugin-decap-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     {
-      resolve: 'gatsby-plugin-google-fonts',
+      resolve: 'gatsby-plugin-purgecss',
       options: {
-        fonts: [
-          'Merriweather','Merriweather Sans',
-        ],
-        display: 'swap',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
+        develop: true,
+        purgeOnly: ['/_index.sass'],
+        printRejected: true,
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array

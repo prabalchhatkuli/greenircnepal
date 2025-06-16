@@ -1,13 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { getSrc } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const ProductPageTemplate = ({
+const ProductPageTemplate = ({
   image,
   title,
   heading,
@@ -23,15 +20,13 @@ export const ProductPageTemplate = ({
       className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          image && image.childImageSharp ? getSrc(image.childImageSharp.gatsbyImageData) : image
         })`,
       }}
     >
       <h2
         className="has-text-weight-bold is-size-1"
         style={{
-          // boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          // backgroundColor: '#f40',
           color: 'white',
           padding: '1rem',
         }}
@@ -86,8 +81,8 @@ export const ProductPageTemplate = ({
                 className="full-width-image-container"
                 style={{
                   backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
+                    fullImage && fullImage.childImageSharp
+                      ? getSrc(fullImage.childImageSharp.gatsbyImageData)
                       : fullImage
                   })`,
                 }}
@@ -166,9 +161,7 @@ export const productPageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         heading
@@ -177,9 +170,7 @@ export const productPageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
               }
             }
             text
@@ -194,9 +185,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
               }
             }
           }
@@ -204,9 +193,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
               }
             }
           }
@@ -214,9 +201,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 1075, quality: 72, layout: CONSTRAINED)
               }
             }
           }
@@ -227,9 +212,7 @@ export const productPageQuery = graphql`
         }
         full_image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         pricing {

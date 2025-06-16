@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class BlogRoll extends React.Component {
+const BlogRoll = class extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -66,7 +66,7 @@ BlogRoll.propTypes = {
   }),
 }
 
-export default () => (
+const BlogRollExport = () => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -88,9 +88,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
                   }
                 }
               }
@@ -102,3 +100,5 @@ export default () => (
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 )
+
+export default BlogRollExport

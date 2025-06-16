@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
 const Navbar = class extends React.Component {
@@ -12,22 +11,16 @@ const Navbar = class extends React.Component {
     }
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
+  toggleHamburger = (e) => {
+    if (e && (e.type === 'keydown' && (e.key !== 'Enter' && e.key !== ' '))) return;
     this.setState(
       {
         active: !this.state.active,
       },
-      // after state has been updated,
       () => {
-        // set the class in state for the navbar accordingly
         this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
+          ? this.setState({ navBarActiveClass: 'is-active' })
+          : this.setState({ navBarActiveClass: '' })
       }
     )
   }
@@ -48,7 +41,12 @@ const Navbar = class extends React.Component {
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+              onClick={this.toggleHamburger}
+              onKeyDown={this.toggleHamburger}
+              role="button"
+              tabIndex={0}
+              aria-label="menu"
+              aria-expanded={this.state.active}
             >
               <span />
               <span />
@@ -63,15 +61,15 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/">
                 Home
               </Link>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
+              <div className="navbar-item has-dropdown is-hoverable">
+                <span className="navbar-link" tabIndex={0} role="button">
                   About us
-                </a>
-                <div class="navbar-dropdown">
+                </span>
+                <div className="navbar-dropdown">
                   <Link className="navbar-item" to="/about">
                     Values and Mission
                   </Link>
-                  <hr class="navbar-divider"/>
+                  <hr className="navbar-divider"/>
                   <Link className="navbar-item" to="/team">
                     Our Team
                   </Link>
