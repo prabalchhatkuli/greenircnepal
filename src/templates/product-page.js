@@ -154,25 +154,17 @@ ProductPage.propTypes = {
 
 export default ProductPage
 
-export const productPageQuery = graphql`
+export const pageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
+        image
         heading
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
+            image
             text
           }
           heading
@@ -182,39 +174,23 @@ export const productPageQuery = graphql`
           heading
           description
           image1 {
+            image
             alt
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
-              }
-            }
           }
           image2 {
+            image
             alt
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
-              }
-            }
           }
           image3 {
+            image
             alt
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 1075, quality: 72, layout: CONSTRAINED)
-              }
-            }
           }
         }
         testimonials {
           author
           quote
         }
-        full_image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
+        full_image
         pricing {
           heading
           description

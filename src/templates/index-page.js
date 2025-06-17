@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import { getSrc } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import Features from '../components/Features';
@@ -15,16 +14,12 @@ const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const bgImage = image && image.childImageSharp
-    ? getSrc(image.childImageSharp.gatsbyImageData)
-    : image;
-
   return (
     <div>
       <div
         className="full-width-image margin-top-0"
         style={{
-          backgroundImage: `url(${bgImage})`,
+          backgroundImage: `url(${image})`,
           backgroundPosition: `top left`,
           backgroundAttachment: `fixed`,
         }}
@@ -160,11 +155,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
+        image
         heading
         subheading
         mainpitch {
@@ -174,11 +165,7 @@ export const pageQuery = graphql`
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
+            image
             text
           }
           heading

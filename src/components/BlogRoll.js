@@ -71,7 +71,7 @@ const BlogRollExport = () => (
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { fields: [frontmatter___date], order: DESC }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
         ) {
           edges {
@@ -86,11 +86,7 @@ const BlogRollExport = () => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
-                featuredimage {
-                  childImageSharp {
-                    gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
-                  }
-                }
+                featuredimage
               }
             }
           }

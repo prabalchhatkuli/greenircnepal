@@ -12,6 +12,7 @@ module.exports = {
     Kochi University, Japan, JICA, aid, affiliation \
     development, disaster prevention',
   },
+  trailingSlash: 'always',
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -51,7 +52,6 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
