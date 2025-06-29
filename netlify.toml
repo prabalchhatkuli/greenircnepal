@@ -1,15 +1,18 @@
 [build]
   publish = "public"
-  command = "npm run build:netlify"
+  command = "./build.sh"
   functions = "netlify/functions"
   
-# Disable automatic plugin installation
+# Disable automatic plugin installation and Gatsby detection
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--production=false"
   GATSBY_TELEMETRY_DISABLED = "1"
   CI = "true"
   NETLIFY_USE_YARN = "false"
+  NETLIFY_SKIP_GATSBY_CACHE = "true"
+  NETLIFY_EXPERIMENTAL_USE_NODE_MODULES_CACHE = "false"
+  NETLIFY_GATSBY_PLUGIN_DISABLE = "true"
   
 [build.cache]
   paths = [
