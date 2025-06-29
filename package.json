@@ -43,7 +43,7 @@
     "clean": "gatsby clean",
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
-    "build:netlify": "rm -rf .cache && rm -rf public && rm -rf node_modules/.cache && npm run clean && GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --verbose",
+    "build:netlify": "rm -rf .cache && rm -rf public && rm -rf node_modules/.cache && npm run clean && NETLIFY_SKIP_GATSBY_CACHE=true NETLIFY_GATSBY_PLUGIN_DISABLE=true NETLIFY_SKIP_AUTO_PLUGINS=true NETLIFY_SKIP_FRAMEWORK_DETECTION=true GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --verbose",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",

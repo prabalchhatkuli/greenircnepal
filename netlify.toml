@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "./build.sh"
+  command = "NETLIFY_SKIP_GATSBY_CACHE=true NETLIFY_GATSBY_PLUGIN_DISABLE=true NETLIFY_SKIP_AUTO_PLUGINS=true NETLIFY_SKIP_FRAMEWORK_DETECTION=true bash -c 'rm -rf .cache public node_modules/.cache && npm ci --prefer-offline --no-audit && gatsby build --verbose'"
   functions = "netlify/functions"
 
 # Disable automatic plugin installation and Gatsby detection
@@ -15,6 +15,7 @@
   NETLIFY_GATSBY_PLUGIN_DISABLE = "true"
   NETLIFY_SKIP_AUTO_PLUGINS = "true"
   NETLIFY_SKIP_FRAMEWORK_DETECTION = "true"
+  DISABLE_NETLIFY_PLUGINS = "true"
   
 [build.cache]
   paths = [
