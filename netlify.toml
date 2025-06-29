@@ -1,10 +1,38 @@
 [build]
   publish = "public"
-  command = "npm run build"
-  functions = "lambda"
+  command = "npm run build:netlify"
+  functions = "netlify/functions"
+
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--production=false"
+  
 [build.cache]
   paths = [
-    "node_modules"
+    "node_modules",
+    ".cache"
   ]
+
+# Prevent caching issues with Gatsby
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# Plugin configuration to fix the caching issue
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
+  
+  [plugins.inputs]
+    exclude = [
+      ".cache/adapters/node_modules/.bin/**"
+    ]
