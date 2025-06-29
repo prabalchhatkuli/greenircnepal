@@ -1,0 +1,6 @@
+# Netlify ignore file - exclude problematic cache directories
+.cache/
+node_modules/.cache/
+.cache/adapters/
+.cache/adapters/node_modules/
+*.cache

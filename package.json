@@ -43,7 +43,7 @@
     "clean": "gatsby clean",
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
-    "build:netlify": "rm -rf .cache && npm run clean && gatsby build --verbose",
+    "build:netlify": "rm -rf .cache && rm -rf public && npm run clean && gatsby build --verbose --no-uglify",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",

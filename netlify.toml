@@ -2,12 +2,14 @@
   publish = "public"
   command = "npm run build:netlify"
   functions = "netlify/functions"
-
+  
+# Disable automatic plugin installation
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--production=false"
   GATSBY_TELEMETRY_DISABLED = "1"
   CI = "true"
+  NETLIFY_USE_YARN = "false"
   
 [build.cache]
   paths = [
