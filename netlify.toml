@@ -1,11 +1,13 @@
 [build]
   publish = "public"
-  command = "npm run build"
+  command = "npm run build:netlify"
   functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--production=false"
+  GATSBY_TELEMETRY_DISABLED = "1"
+  CI = "true"
   
 [build.cache]
   paths = [
@@ -26,7 +28,3 @@
 
 [build.processing.html]
   pretty_urls = true
-
-# Plugin configuration
-[[plugins]]
-  package = "@netlify/plugin-gatsby"
