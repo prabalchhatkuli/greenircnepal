@@ -3,9 +3,6 @@
   command = "./build.sh"
   functions = "netlify/functions"
 
-# Explicitly disable all plugins
-[[plugins]]
-
 # Disable automatic plugin installation and Gatsby detection
 [build.environment]
   NODE_VERSION = "22"
@@ -17,6 +14,7 @@
   NETLIFY_EXPERIMENTAL_USE_NODE_MODULES_CACHE = "false"
   NETLIFY_GATSBY_PLUGIN_DISABLE = "true"
   NETLIFY_SKIP_AUTO_PLUGINS = "true"
+  NETLIFY_SKIP_FRAMEWORK_DETECTION = "true"
   
 [build.cache]
   paths = [
