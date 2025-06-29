@@ -1,11 +1,9 @@
-@forward "bulma/sass/utilities/initial-variables" with (
-  $scheme: light,
-  $primary: hsl(171, 100%, 41%),
-  $link: hsl(233, 100%, 63%),
-  $info: hsl(198, 100%, 70%),
-  $success: hsl(153, 53%, 53%),
-  $warning: hsl(42, 100%, 53%),
-  $danger: hsl(348, 100%, 70%),
-  $background: #fff,
-  $text: #363636
-)
+// Bulma variable overrides
+@import "~bulma/sass/utilities/initial-variables"
+
+$kaldi-red: #D64000
+$kaldi-red-invert: #fff
+$primary: $kaldi-red
+$primary-invert: $kaldi-red-invert
+$body-color: #333
+$black: #2b2523

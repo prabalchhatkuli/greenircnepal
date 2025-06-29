@@ -1,89 +1,7 @@
-// Kaldi logo brand color: #2c549e
-$kaldi-red: #2c549e
-$kaldi-red-invert: #fff
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
-$white-ter: #f5f5f5
-
-// Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color: $kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
-
-body
-  background: #f8fafc
-  color: $body-color
-  font-family: 'Merriweather Sans', Arial, sans-serif
-  font-size: 1.08rem
-  line-height: 1.7
-  margin: 0
-  min-height: 100vh
-
-div
-  font-family: 'Merriweather Sans'
-
-h1,h2,h3,h4,h5,h6
-  font-family: 'Merriweather'
+@import ./variables.sass
 
 .navbar .navbar-menu
-  font-family: 'Merriweather Sans'
   box-shadow: none !important
-
-.navbar
-  background: #fff
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04)
-  border-bottom: 1px solid #e5e7eb
-  padding: 0.5rem 0
-  .navbar-item
-    font-weight: 600
-    color: $primary
-    &:hover
-      color: #e54695
-
-.navbar-item .icon
-  color: $primary
-
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
-
-.navbar-item img
-  max-height: 4rem
-
-.section
-  background: #fff
-  border-radius: 1rem
-  margin-bottom: 1.5rem
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03)
-  padding: 2.5rem 1.25rem
-
-.hero
-  background: linear-gradient(120deg, $primary 0%, #e54695 100%)
-  color: #fff
-  padding: 3rem 1.25rem
-  border-radius: 1rem
-  margin-bottom: 1.5rem
-  text-align: center
-  h1, h2, h3
-    color: #fff
-
-.card
-  border-radius: 1rem
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04)
-  overflow: hidden
-  margin-bottom: 1.5rem
-  background: #fff
-  border: 1px solid #e5e7eb
 
 .content .taglist
   list-style: none
@@ -100,6 +18,7 @@ h1,h2,h3,h4,h5,h6
     margin-bottom: 1.5rem
     margin-top: 0
 
+// Helper Classes
 .full-width-image-container
   width: 100vw
   height: 400px
@@ -125,6 +44,7 @@ h1,h2,h3,h4,h5,h6
 .btn
   display: inline-block
   padding: 12px 16px 10px
+  font-size: 18px
   font-size: 1rem
   line-height: 1.25
   background-color: #fff
@@ -141,17 +61,20 @@ h1,h2,h3,h4,h5,h6
 .margin-top-0
   margin-top: 0 !important
 
+.navbar-item .icon
+  color: $primary
+// Override for use of svg's from https://simpleicons.org/
+.icon
+  svg
+    width: 1.5rem
+    height: 1.5rem
+    fill: currentColor
+.navbar-brand
+  .navbar-item.logo
+    padding: 0 1rem
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
-  color: $black
-  text-align: center
-  font-size: 1rem
-  border-top: 1px solid #e5e7eb
-  a
-    color: #e54695
-    &:hover
-      color: $primary
 
 .menu-label
   font-size: 1em !important
@@ -171,55 +94,12 @@ footer.footer
   vertical-align: middle
   display: inline
 
+// blog roll
 .blog-list-item.is-featured
-  background-color: #12963333
+  background-color: #d6400033
 .blog-list-item header
   display: flex
   margin-bottom: 1em
 .blog-list-item .featured-thumbnail
   flex-basis: 35%
   margin: 0 1.5em 0 0
-
-@media (min-width: 769px) and (max-width: 1023px)
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%
-
-@media (max-width: 768px)
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center
-    max-width: 70%
-    margin: 0 0 1em
-
-// Utility classes
-.text-center
-  text-align: center
-.mt-4
-  margin-top: 2rem
-.mb-4
-  margin-bottom: 2rem
-.p-4
-  padding: 2rem
-
-// Responsive adjustments
-@media (max-width: 768px)
-  .full-width-image-container, .full-width-image
-    height: 220px
-    margin: 1em -50vw
-  section, .section
-    padding: 1.5rem 0.5rem
-  .hero
-    padding: 2rem 0.5rem
-
-.section, .content, .subtitle, .title, .label, .input, .textarea
-  color: $body-color !important
-
-.input, .textarea
-  background: #fff !important
-  color: $body-color !important
-  border: 1px solid #e5e7eb
-  box-shadow: none
-
-.label
-  color: $body-color !important

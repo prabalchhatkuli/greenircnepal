@@ -12,3 +12,153 @@ $dark: #363636
 
 @import "bulma/bulma"
 @import "./custom-style.sass"
+
+// Dark mode support using CSS custom properties and data attributes
+:root
+  --bg-color: #{$background}
+  --text-color: #{$text}
+  --bg-color-semi-transparent: rgba(255, 255, 255, 0.8)
+  --border-color: #e1e1e1
+  --input-bg: #ffffff
+  --input-border: #dbdbdb
+
+// Logo visibility for light mode (default)
+.logo-light
+  display: inline-block
+
+.logo-dark
+  display: none
+
+// Footer logo visibility (footer has dark background, so logic is inverted)
+.footer-logo-light
+  display: inline-block
+
+.footer-logo-dark
+  display: none
+
+// Dark mode theme toggle button styling
+.theme-toggle
+  background: transparent !important
+  border: 1px solid var(--text-color) !important
+  color: var(--text-color) !important
+  border-radius: 6px !important
+  transition: all 0.3s ease !important
+  
+  &:hover
+    background: var(--text-color) !important
+    color: var(--bg-color) !important
+
+// Dark mode styles for data-theme attribute
+[data-theme="dark"]
+  --bg-color: #1a1a1a
+  --text-color: #f0f0f0
+  --bg-color-semi-transparent: rgba(26, 26, 26, 0.8)
+  --border-color: #404040
+  --input-bg: #2a2a2a
+  --input-border: #4a4a4a
+
+// Dark mode styles for system preference (when no explicit theme is set)
+@media (prefers-color-scheme: dark)
+  :root:not([data-theme="light"])
+    --bg-color: #1a1a1a
+    --text-color: #f0f0f0
+    --bg-color-semi-transparent: rgba(26, 26, 26, 0.8)
+    --border-color: #404040
+    --input-bg: #2a2a2a
+    --input-border: #4a4a4a
+
+// Logo visibility - manual dark mode
+[data-theme="dark"]
+  .logo-light
+    display: none
+  
+  .logo-dark
+    display: inline-block
+  
+  .footer-logo-light
+    display: inline-block
+  
+  .footer-logo-dark
+    display: none
+
+// Logo visibility - system dark mode preference
+@media (prefers-color-scheme: dark)
+  :root:not([data-theme="light"])
+    .logo-light
+      display: none
+    
+    .logo-dark
+      display: inline-block
+    
+    .footer-logo-light
+      display: inline-block
+    
+    .footer-logo-dark
+      display: none
+
+// Component styling - manual dark mode
+[data-theme="dark"]
+  .navbar
+    background-color: var(--bg-color) !important
+  
+  .navbar-item, .navbar-link
+    color: var(--text-color) !important
+  
+  .navbar-dropdown
+    background-color: var(--bg-color) !important
+  
+  .section
+    background-color: var(--bg-color)
+    color: var(--text-color)
+  
+  .input, .textarea
+    background-color: var(--input-bg)
+    border-color: var(--input-border)
+    color: var(--text-color)
+    
+    &:focus
+      border-color: #{$primary}
+      box-shadow: 0 0 0 0.125em #{rgba($primary, 0.25)}
+  
+  .label
+    color: var(--text-color)
+  
+  .title, .subtitle
+    color: var(--text-color)
+
+// Component styling - system dark mode preference  
+@media (prefers-color-scheme: dark)
+  :root:not([data-theme="light"])
+    .navbar
+      background-color: var(--bg-color) !important
+    
+    .navbar-item, .navbar-link
+      color: var(--text-color) !important
+    
+    .navbar-dropdown
+      background-color: var(--bg-color) !important
+    
+    .section
+      background-color: var(--bg-color)
+      color: var(--text-color)
+    
+    .input, .textarea
+      background-color: var(--input-bg)
+      border-color: var(--input-border)
+      color: var(--text-color)
+      
+      &:focus
+        border-color: #{$primary}
+        box-shadow: 0 0 0 0.125em #{rgba($primary, 0.25)}
+    
+    .label
+      color: var(--text-color)
+    
+    .title, .subtitle
+      color: var(--text-color)
+
+// Contact page specific styles
+.contact-info-card
+  background-color: var(--bg-color-semi-transparent) !important
+  border-radius: 25px
+  color: var(--text-color)

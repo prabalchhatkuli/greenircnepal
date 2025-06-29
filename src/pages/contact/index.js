@@ -39,21 +39,18 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="columns is-variable is-7">
-              <div className="column is-two-fifths" 
+              <div className="column is-two-fifths contact-info-card" 
                 style={{
                 // backgroundImage: `url("/img/customer.jpg")`,
                 // backgroundRepeat: "no-repeat",
                 // backgroundSize: "cover",
                 backgroundPosition: "center bottom",
-                backgroundColor:"rgba(255, 255, 255, 0.8)",
-                borderRadius: "25px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center"
               }}
               >
-                  <div className="content is-normal has-text-centered"
-                  style={{backgroundColor:"rgba(255, 255, 255, 0.8)", borderRadius: "25px"}}>
+                  <div className="content is-normal has-text-centered contact-info-card">
                     <h3>
                       Hello there, please send us any questions, comments,
                       or enquiry. We will try to get back to you as soon as possible.
