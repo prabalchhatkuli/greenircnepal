@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "npm run build:netlify"
+  command = "npm run build"
   functions = "netlify/functions"
 
 [build.environment]
@@ -9,8 +9,7 @@
   
 [build.cache]
   paths = [
-    "node_modules",
-    ".cache"
+    "node_modules"
   ]
 
 # Prevent caching issues with Gatsby
@@ -28,11 +27,6 @@
 [build.processing.html]
   pretty_urls = true
 
-# Plugin configuration to fix the caching issue
+# Plugin configuration
 [[plugins]]
   package = "@netlify/plugin-gatsby"
-  
-  [plugins.inputs]
-    exclude = [
-      ".cache/adapters/node_modules/.bin/**"
-    ]
