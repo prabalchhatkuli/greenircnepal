@@ -2,8 +2,13 @@
   publish = "public"
   command = "npm run build"
   functions = "lambda"
+
+# Explicitly control the Gatsby plugin version to prevent EISDIR errors
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
+
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
 [build.cache]
   paths = [
     "node_modules"
