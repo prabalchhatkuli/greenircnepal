@@ -3,7 +3,7 @@
   command = "npm run build"
   functions = "lambda"
 
-# Explicitly control the Gatsby plugin version to prevent EISDIR errors
+# Use latest Gatsby plugin version compatible with Gatsby 5
 [[plugins]]
   package = "@netlify/plugin-gatsby"
 
