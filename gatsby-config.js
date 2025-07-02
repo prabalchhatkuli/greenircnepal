@@ -84,6 +84,6 @@ module.exports = {
         printRejected: true,
       },
     }, // must be after other CSS plugins
-    // 'gatsby-plugin-netlify' removed - conflicts with gatsby-adapter-netlify
+    'gatsby-plugin-netlify',
   ],
 }
