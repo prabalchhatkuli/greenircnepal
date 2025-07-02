@@ -8,9 +8,16 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
-local_backend: true
 media_folder: static/img
 public_folder: /img
+
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: dfyqg6wxw
+#     api_key: 397656612391638
+
+local_backend: true
 site_url: https://greenircnepal.org/
 display_url: https://greenircnepal.org/
 
