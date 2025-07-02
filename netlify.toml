@@ -9,9 +9,6 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  # Configure secrets scanning to ignore generated files
-  SECRETS_SCAN_OMIT_PATHS = "public/**,static/admin/config.yml"
-  
 [build.cache]
   paths = [
     "node_modules"
